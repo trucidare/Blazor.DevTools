@@ -12,10 +12,10 @@ It is hard influenced by the Nuxt.js Devtools.
 
 ## Installation
 
-To use these tools just reference the ```Blazor.DevTools``` project and add the following code:
+To use these tools just reference the ```Blazor.DevTools``` project to your Blazor Wasm or Server Project and add the following code:
 
 ```csharp
-
+// Only needed for BlazorWebAssembly projects
 #if DEBUG
 builder.AddDevTools();
 #endif 
