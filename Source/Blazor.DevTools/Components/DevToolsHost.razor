@@ -1,0 +1,60 @@
+<div class="dev-tools-view">
+    <div class="dev-tools-container">
+        @if (_active)
+        {
+            <div class="dev-tools-nav">
+                <div class="group">
+                    <div class="item">
+                        <img src="/_content/Blazor.DevTools/images/blazorIcon.png" alt="Blazor Icon"/>
+                        <span>@RendererInfo.Name</span>
+                    </div>
+                    @foreach (var item in _menuItems)
+                    {
+                        <div @key="@item" class="item @(_contentType == item.Type ? "active" : "")" @onclick="@(() => _contentType = item.Type)">
+                            <DIcon Style="width: 25px">
+                                @item.Icon
+                            </DIcon>
+                            <span>@item.Name</span>
+                        </div>
+                    }
+                </div>
+                <div style="flex-grow: 1;">
+                    @switch (_contentType)
+                    {
+                        case ContentType.Overview:
+                            <Overview />
+                            break;
+                        case ContentType.Pages:
+                            <Pages />
+                            break;
+                        case ContentType.Components:
+                            <Components />
+                            break;
+                        case ContentType.RuntimeConfig:
+                            <Config />
+                            break;
+                        case ContentType.Modules:
+                            <Modules />
+                            break;
+                        case ContentType.Plugins:
+                            <Plugins />
+                            break;
+                        case ContentType.Instances:
+                            <Instances />
+                            break;
+                        default:
+                            <span>Undefined Item</span>
+                            break;
+                    }
+                </div>
+            </div>
+        }
+        <div class="dev-tools-activator" @onclick="@ToggleDevTools">
+            <img src="/_content/Blazor.DevTools/images/blazorIcon.png" alt="Blazor Icon" />
+            @if (!_active)
+            {
+                <span>DevTools - @RendererInfo.Name</span>
+            }
+        </div>
+    </div>
+</div>

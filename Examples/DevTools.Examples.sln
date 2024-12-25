@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTools.Examples.Wasm", "DevTools.Examples.Wasm\DevTools.Examples.Wasm.csproj", "{DEF26D64-9035-443C-93A2-EBD81B8128FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.DevTools", "..\Source\Blazor.DevTools\Blazor.DevTools.csproj", "{5714F3A4-3FA9-4D5A-B759-E29F3A29471D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTools.Examples.Server", "DevTools.Examples.Server\DevTools.Examples.Server.csproj", "{3C1325D4-BA56-4E5E-8CEA-FB263E064708}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEF26D64-9035-443C-93A2-EBD81B8128FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF26D64-9035-443C-93A2-EBD81B8128FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF26D64-9035-443C-93A2-EBD81B8128FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF26D64-9035-443C-93A2-EBD81B8128FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5714F3A4-3FA9-4D5A-B759-E29F3A29471D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5714F3A4-3FA9-4D5A-B759-E29F3A29471D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5714F3A4-3FA9-4D5A-B759-E29F3A29471D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5714F3A4-3FA9-4D5A-B759-E29F3A29471D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C1325D4-BA56-4E5E-8CEA-FB263E064708}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C1325D4-BA56-4E5E-8CEA-FB263E064708}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C1325D4-BA56-4E5E-8CEA-FB263E064708}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C1325D4-BA56-4E5E-8CEA-FB263E064708}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

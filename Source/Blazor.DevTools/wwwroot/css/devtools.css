@@ -1,0 +1,23 @@
+
+.page-list {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    height: calc(100% - 3rem);
+}
+
+.page-list a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid darkgray;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.page-list .active {
+    color: yellowgreen;
+}

@@ -1,0 +1,26 @@
+@using Blazor.DevTools.Components.Icons
+@using Microsoft.AspNetCore.Components.Routing
+
+<div style="display: flex; flex-direction: row; width: 100%; height: 100%; overflow: hidden;">
+    <div style="flex-grow: 1;">
+        @foreach (var group in GetGroups())
+        {
+            <div @key="@group" style="padding: 10px 10px;">
+                <div style="color: rgba(255,255,255,0.6); padding: 15px 0; display: flex; flex-direction: row; align-items: center; cursor: pointer; background-color: rgba(255,255,255,.1); border-radius: 8px; user-select: none;">
+                    <DIcon Style="width: 30px;">
+                        @Baseline.ChevronDown
+                    </DIcon>
+                    <span>@(group.StartsWith("/") ? group : $"/{group}") </span>
+                </div>
+                <div class="page-list">
+                    @foreach (var inst in _routes.Where(s => s.Group == group))
+                    {
+                        <div @key="@inst" @onclick="@(() => NavManager.NavigateTo(inst.Template))">
+                            <span>/@inst.Template.Split("/").TakeLast(1).FirstOrDefault()</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

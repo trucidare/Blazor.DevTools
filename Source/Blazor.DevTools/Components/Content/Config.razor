@@ -1,0 +1,31 @@
+@using Blazor.DevTools.Components.Icons
+<div style="padding: 10px 10px; height: 100%; overflow: hidden;">
+    <div style="color: rgba(255,255,255,0.6); padding: 15px 0; display: flex; flex-direction: row; align-items: center; cursor: pointer; background-color: rgba(255,255,255,.1); border-radius: 8px; user-select: none;">
+        <DIcon Style="width: 30px;">
+            @Baseline.ChevronDown
+        </DIcon>
+        <span>Config</span>
+    </div>
+
+    <div style="padding: 10px 30px; display: flex; flex-direction: column; gap: 5px; overflow-y: auto; height: calc(100% - 3rem);">
+        @foreach (var kv in _options)
+        {
+            <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid darkgray; padding: 10px; border-radius: 8px;">
+                <span>@kv.Key</span>
+                <span style="white-space: nowrap; overflow: hidden; width: 490px; text-overflow: ellipsis">@kv.Value</span>
+            </div>
+        }
+        
+        @if (_options.Count == 0)
+        {
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                <div>
+                    <DIcon Style="width: 128px">
+                        @Baseline.NoConfig
+                    </DIcon>
+                    <span>No configuration</span>
+                </div>
+            </div>  
+        }
+    </div>
+</div>
